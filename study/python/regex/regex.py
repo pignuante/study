@@ -25,8 +25,8 @@ print("3 : {}".format(pattern03.findall(story)))
 #    각각의 앞/뒤에 before, after그룹 이름을 사용한다.
 
 print("4 : ")
-print(re.sub(
-       r"(?P<before>), (?P<after>)" ,\
-       lambda s: "{b}, {a}".format(b = s.group("before").upper(), \
-                                   a = s.group("after")),
+print(
+    re.sub(
+        r"(?P<before>\w+), (?P<after>\w+)",
+        lambda s: "{b}, <{a}>".format(b=s.group("before").upper(), a=s.group("after")),
         story))
