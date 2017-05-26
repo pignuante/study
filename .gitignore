@@ -1,6 +1,11 @@
 *.swp
 *.ipynb
 20170526.md
+.ipynb_checkpoints
+.ipynb_checkpoints/*
+.idea
+
+
 ### Django ###
 *.log
 *.pot
