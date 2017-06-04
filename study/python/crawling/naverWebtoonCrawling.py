@@ -3,22 +3,6 @@ import requests
 from bs4 import BeautifulSoup
 
 
-# url_naver_webtoon_episode_list = 'http://comic.naver.com/webtoon/list.nhn'
-# id_1 = 654774
-# id_2 = 651673
-# params_webtoon_episode_list = {
-#     'titleId': id_1,
-#     'page': 1,
-# }
-# response = requests.get(url_naver_webtoon_episode_list, params_webtoon_episode_list)
-#
-# print(response)
-#
-# r = BeautifulSoup(response.text, "lxml")
-
-# 다운로드 추가필요
-
-
 class NaverWebtoonCrawler:
     def __init__(self, webtoonID=654774, page=1):
         self.base_url = "http://comic.naver.com/webtoon/list.nhn"
@@ -164,6 +148,7 @@ class Episode:
 a = NaverWebtoonCrawler(654774, 1)
 a.crawling_all_episode()
 a.print_episodes()
-print(a.crawling_episode_images(100))
+print(a.crawling_episode_images(102))
+
 
 
